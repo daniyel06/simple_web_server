@@ -22,10 +22,15 @@ Testing the webserver.
 
 # PROGRAM:
 from http.server import BaseHTTPRequestHandler, HTTPServer
+
 class MyHandler(BaseHTTPRequestHandler):
+
     def do_GET(self):
+    
         print("Request received")
+        
         # Define the content (the HTML response)
+        
         content = """
         
         <html>
@@ -43,13 +48,21 @@ class MyHandler(BaseHTTPRequestHandler):
             </body>
         </html>
         """
+        
         self.send_response(200)
+        
         self.send_header('Content-type', 'text/html; charset=utf-8')
+        
         self.end_headers()
+        
         self.wfile.write(content.encode())
+        
 server_address = ('', 8000)
+
 httpd = HTTPServer(server_address, MyHandler)
+
 print("My webserver is running...")
+
 httpd.serve_forever()
 
 # OUTPUT:
