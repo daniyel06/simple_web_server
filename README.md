@@ -41,6 +41,7 @@ self.send_header('Content-type', 'text/html; charset=utf-8')
 self.end_headers()
 self.wfile.write(content.encode()
 # OUTPUT:
+
 ![Screenshot 2024-11-21 113151](https://github.com/user-attachments/assets/7715726b-9c3b-40e2-b9a2-c75d52f2694f)
 ![Screenshot 2024-11-21 113141](https://github.com/user-attachments/assets/b55aab1b-10c0-4fe9-ba37-1469cc627083)
 
