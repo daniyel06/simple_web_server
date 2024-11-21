@@ -22,12 +22,12 @@ Testing the webserver.
 
 # PROGRAM:
 from http.server import BaseHTTPRequestHandler, HTTPServer
-
 class MyHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         print("Request received")
         # Define the content (the HTML response)
         content = """
+        
         <html>
             <body>
                 <h1 align="center">Laptop Specification - SD DANIYEL ANTONY RAJ (24002985)</h1>
@@ -51,13 +51,8 @@ server_address = ('', 8000)
 httpd = HTTPServer(server_address, MyHandler)
 print("My webserver is running...")
 httpd.serve_forever()
-httpd.serve_forever()                            """
-self.send_response(200)
-self.send_header('Content-type', 'text/html; charset=utf-8')
-self.end_headers()
-self.wfile.write(content.encode()
-# OUTPUT:
 
+# OUTPUT:
 ![Screenshot 2024-11-21 113151](https://github.com/user-attachments/assets/7715726b-9c3b-40e2-b9a2-c75d52f2694f)
 ![Screenshot 2024-11-21 113141](https://github.com/user-attachments/assets/b55aab1b-10c0-4fe9-ba37-1469cc627083)
 
