@@ -21,111 +21,28 @@ Serving the HTML pages.
 Testing the webserver.
 
 # PROGRAM:
-from http.server import BaseHTTPRequestHandler, HTTPServer
-
-class MyHandler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        print("Request received")
-        
-        # Define the content (the HTML response)
-        content = """
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>College Timetable</title>
-            <style>
-                table {
-                    width: 100%;
-                    border-collapse: collapse;
-                }
-                th, td {
-                    padding: 8px;
-                    text-align: center;
-                }
-                th {
-                    background-color: #f2f2f2;
-                }
-            </style>
-        </head>
-        <body>
-
-        <h1>College Timetable</h1>
-
-        <table border="1">
-            <tr>
-                <th>Time</th>
-                <th>08 - 10</th>
-                <th>10 - 12</th>
-                <th>12 - 01</th>
-                <th>01 - 03</th>
-                <th>03 - 05</th>
-            </tr>
-            <tr>
-                <th>Monday</th>
-                <td></td>
-                <td>Web</td>
-                <td>L</td>
-                <td>C</td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>Tuesday</th>
-                <td>Career</td>
-                <td>D.E.</td>
-                <td>U</td>
-                <td>Chem</td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>Wednesday</th>
-                <td>C</td>
-                <td></td>
-                <td>N</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>Thursday</th>
-                <td>EDM</td>
-                <td></td>
-                <td>C</td>
-                <td>Web</td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>Friday</th>
-                <td>Chem</td>
-                <td>Math</td>
-                <td>H</td>
-                <td>D.E.</td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>Saturday</th>
-                <td>EDM</td>
-                <td></td>
-                <td>H</td>
-                <td>Math</td>
-                <td>Web</td>
-            </tr>
-        </table>
-
-        </body>
-        </html>
-        """
-        self.send_response(200)
-        self.send_header('Content-type', 'text/html; charset=utf-8')
-        self.end_headers()
-        self.wfile.write(content.encode())
-server_address = ('', 8000)
-httpd = HTTPServer(server_address, MyHandler)
-print("My webserver is running...")
-httpd.serve_forever()
+<html>
+    <body>
+        <h1 align="center">Laptop Specification - SD DANIYEL ANTONY RAJ (24002985)</h1>
+            <ol type="I" start="1">
+                <li>Device name: DESTOP-MOHHBTU</li>
+                <li>Processor: 13th Gen Intel(R) Core(TM) i5-1335U 1.30 GHz</li>
+                <li>Installed RAM: 16.0 GB (15.7 GB usable)</li>
+                <li>Device ID: 15EEA3B2-7EF5-4DEC-903D-577382C3C005</li>
+                <li>Product ID: 00342-42709-03621-AAOEM</li>
+                <li>System type: 64-bit operating system, x64-based processor</li>
+                <li>Pen and touch: No pen or touch input is available for this device</li>
+            </ol>
+    </body>
+</html>
+                            """
+self.send_response(200)
+self.send_header('Content-type', 'text/html; charset=utf-8')
+self.end_headers()
+self.wfile.write(content.encode()
 # OUTPUT:
-![Screenshot 2024-11-21 180339](https://github.com/user-attachments/assets/ab963bb6-df15-48f9-9ec3-b31ce51c695b)
-![Screenshot 2024-11-21 180413](https://github.com/user-attachments/assets/990d10b7-eab2-4065-b945-95b9de89d71a)
+![Screenshot 2024-11-21 113151](https://github.com/user-attachments/assets/7715726b-9c3b-40e2-b9a2-c75d52f2694f)
+![Screenshot 2024-11-21 113141](https://github.com/user-attachments/assets/b55aab1b-10c0-4fe9-ba37-1469cc627083)
 
 
 # RESULT:
